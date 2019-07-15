@@ -108,6 +108,7 @@ LEF_ASSIGN_OPERATOR_C( lefiUnits ) {
     LEF_COPY_FUNC( current_ );
     LEF_COPY_FUNC( voltage_ );
     LEF_COPY_FUNC( frequency_ );
+    return *this;
 }
 
 void

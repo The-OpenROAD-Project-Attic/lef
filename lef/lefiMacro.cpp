@@ -61,6 +61,7 @@ LEF_COPY_CONSTRUCTOR_C( lefiObstruction )
 
 LEF_ASSIGN_OPERATOR_C ( lefiObstruction ) {
     LEF_MALLOC_FUNC( geometries_, lefiGeometries, sizeof(lefiGeometries)* 1 );
+    return *this;
 }
 
 
@@ -254,6 +255,7 @@ LEF_ASSIGN_OPERATOR_C( lefiPinAntennaModel ) {
     LEF_MALLOC_FUNC( antennaMaxCutCar_, double, sizeof(double) * numAntennaMaxCutCar_);
     // !!
     LEF_MALLOC_FUNC_FOR_2D_STR( antennaMaxCutCarLayer_, numAntennaMaxCutCar_ );
+    return *this;
 }
 
 lefiPinAntennaModel::~lefiPinAntennaModel()

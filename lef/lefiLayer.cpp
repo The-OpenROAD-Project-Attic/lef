@@ -952,6 +952,7 @@ LEF_ASSIGN_OPERATOR_C( lefiOrthogonal ) {
     LEF_COPY_FUNC( numCutOrtho_ );
     LEF_MALLOC_FUNC( cutWithin_, double, sizeof(double) * numCutOrtho_ );
     LEF_MALLOC_FUNC( ortho_, double, sizeof(double) * numCutOrtho_ ); 
+    return *this;
 }
 
 
