@@ -3,6 +3,8 @@ project(LEF_PARSER
   LANGUAGES CXX 
 )
 
+option(BUILD_SHARED_LIBS "Build a shared library" OFF)
+
 cmake_minimum_required(VERSION 2.6)
 
 set(LEFLIB_HOME ${CMAKE_CURRENT_SOURCE_DIR})
@@ -138,13 +140,19 @@ add_custom_command(
 )
 add_custom_target(LefBisonTarget ALL DEPENDS lef/lef.tab.cpp)
 
+if(BUILD_SHARED_LIBS)
+  add_library( lef SHARED ${LEFLIB_LEF_SRC} )
+  add_library( lefzlib SHARED ${LEFLIB_LEFZLIB_SRC} )
 
-add_library( lef STATIC ${LEFLIB_LEF_SRC} )
-add_library( lefzlib STATIC ${LEFLIB_LEFZLIB_SRC} )
+  add_library( clef SHARED ${LEFLIB_CLEF_SRC} )
+  add_library( clefzlib SHARED ${LEFLIB_CLEFZLIB_SRC})
+else()
+  add_library( lef STATIC ${LEFLIB_LEF_SRC} )
+  add_library( lefzlib STATIC ${LEFLIB_LEFZLIB_SRC} )
 
-add_library( clef STATIC ${LEFLIB_CLEF_SRC} )
-add_library( clefzlib STATIC ${LEFLIB_CLEFZLIB_SRC})
-
+  add_library( clef STATIC ${LEFLIB_CLEF_SRC} )
+  add_library( clefzlib STATIC ${LEFLIB_CLEFZLIB_SRC})
+endif()
 
 set_target_properties( lef
   PROPERTIES
