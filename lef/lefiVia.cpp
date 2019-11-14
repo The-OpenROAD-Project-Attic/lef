@@ -111,6 +111,7 @@ LEF_COPY_CONSTRUCTOR_C(lefiViaLayer)
 }
 
 LEF_ASSIGN_OPERATOR_C(lefiViaLayer) {
+    CHECK_SELF_ASSIGN
 //    printf("lefiViaLayer ASSIGN OPERATOR!\n");
 //    fflush(stdout);
     this->Init();

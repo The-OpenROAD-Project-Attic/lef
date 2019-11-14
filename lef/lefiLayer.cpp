@@ -366,6 +366,7 @@ LEF_COPY_CONSTRUCTOR_C(lefiParallel) {
 }
 
 LEF_ASSIGN_OPERATOR_C(lefiParallel) {
+    CHECK_SELF_ASSIGN
     this->Init();
     LEF_COPY_FUNC(numLength_);
     LEF_COPY_FUNC(numWidth_);
@@ -498,6 +499,7 @@ LEF_COPY_CONSTRUCTOR_C( lefiInfluence ) {
 }
 
 LEF_ASSIGN_OPERATOR_C( lefiInfluence ) {
+    CHECK_SELF_ASSIGN
     this->Init();
     LEF_COPY_FUNC(numAllocated_);
     LEF_COPY_FUNC(numWidth_);
@@ -783,6 +785,7 @@ LEF_COPY_CONSTRUCTOR_C( lefiSpacingTable ) {
 }
 
 LEF_ASSIGN_OPERATOR_C( lefiSpacingTable) {
+    CHECK_SELF_ASSIGN
     this->Init();
     LEF_COPY_FUNC( hasInfluence_ );
     LEF_MALLOC_FUNC_WITH_OPERATOR( influence_, lefiInfluence, sizeof(lefiInfluence));
@@ -947,11 +950,13 @@ LEF_COPY_CONSTRUCTOR_C( lefiOrthogonal ) {
 }
 
 LEF_ASSIGN_OPERATOR_C( lefiOrthogonal ) {
+    CHECK_SELF_ASSIGN
     this->Init();
     LEF_COPY_FUNC( numAllocated_ );
     LEF_COPY_FUNC( numCutOrtho_ );
     LEF_MALLOC_FUNC( cutWithin_, double, sizeof(double) * numCutOrtho_ );
     LEF_MALLOC_FUNC( ortho_, double, sizeof(double) * numCutOrtho_ ); 
+    return *this;
 }
 
 
