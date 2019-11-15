@@ -90,6 +90,7 @@ LEF_COPY_CONSTRUCTOR_C( lefiUnits ) {
 }
 
 LEF_ASSIGN_OPERATOR_C( lefiUnits ) {
+    CHECK_SELF_ASSIGN
     LEF_COPY_FUNC( hasDatabase_ );
     LEF_COPY_FUNC( hasCapacitance_ );
     LEF_COPY_FUNC( hasResistance_ );
@@ -108,6 +109,7 @@ LEF_ASSIGN_OPERATOR_C( lefiUnits ) {
     LEF_COPY_FUNC( current_ );
     LEF_COPY_FUNC( voltage_ );
     LEF_COPY_FUNC( frequency_ );
+    return *this;
 }
 
 void

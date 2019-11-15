@@ -1193,7 +1193,7 @@ LEF_COPY_CONSTRUCTOR_C( lefiSite ) :
 }
 
 LEF_ASSIGN_OPERATOR_C( lefiSite ) {
-
+    CHECK_SELF_ASSIGN
     name_ = 0;
     siteNames_ = 0;
     siteOrients_ = 0;
@@ -1216,7 +1216,7 @@ LEF_ASSIGN_OPERATOR_C( lefiSite ) {
 
     LEF_MALLOC_FUNC_FOR_2D_STR ( siteNames_, numRowPattern_ );
     LEF_MALLOC_FUNC( siteOrients_, int, sizeof(int) * numRowPattern_ );
-
+    return *this;
 }
 
 void
