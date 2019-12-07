@@ -96,6 +96,8 @@ set_target_properties( lef
   ARCHIVE_OUTPUT_DIRECTORY ${LEFLIB_HOME}/lib
   LIBRARY_OUTPUT_DIRECTORY ${LEFLIB_HOME}/lib
   RUNTIME_OUTPUT_DIRECTORY ${LEFLIB_HOME}/lib
+  # python regression requirement (gag me) -cherry
+  POSITION_INDEPENDENT_CODE ON
 )
 
 set_target_properties( lefzlib
@@ -103,6 +105,8 @@ set_target_properties( lefzlib
   ARCHIVE_OUTPUT_DIRECTORY ${LEFLIB_HOME}/lib
   LIBRARY_OUTPUT_DIRECTORY ${LEFLIB_HOME}/lib
   RUNTIME_OUTPUT_DIRECTORY ${LEFLIB_HOME}/lib
+  # python regression requirement (gag me) -cherry
+  POSITION_INDEPENDENT_CODE ON
 )
 
 # include directory settings
