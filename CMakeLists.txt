@@ -81,9 +81,10 @@ set (LEFLIB_HEADERS
 # BISON dependencies
 add_custom_command( 
   OUTPUT ${LEFLIB_HOME}/lef/lef.tab.cpp
-  COMMAND ${BISON_EXECUTABLE} -v -plefyy -d ${LEFLIB_HOME}/lef/lef.y 
+  COMMAND ${BISON_EXECUTABLE} -v -plefyy -d ${LEFLIB_HOME}/lef/lef.y
   COMMAND mv lef.tab.h ${LEFLIB_HOME}/lef/lef.tab.h
   COMMAND mv lef.tab.c ${LEFLIB_HOME}/lef/lef.tab.cpp
+  DEPENDS ${LEFLIB_HOME}/lef/lef.y
 )
 add_custom_target(LefBisonTarget ALL DEPENDS lef/lef.tab.cpp)
 
