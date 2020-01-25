@@ -63,6 +63,10 @@
 #include "lefrCallBacks.hpp"
 #include "lefrSettings.hpp"
 
+#if defined(__clang__)
+#pragma(clang, ignored -Wdeprecated-register)
+#endif
+
 BEGIN_LEFDEF_PARSER_NAMESPACE
 
 #define LYPROP_ECAP "EDGE_CAPACITANCE"
