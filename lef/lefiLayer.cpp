@@ -1670,6 +1670,7 @@ lefiLayer::lefiLayer()
   hasMinimumcutWithin_(NULL),
   minimumcutWithin_(NULL),
   hasMinimumcutConnection_(NULL),
+  minimumcutConnection_(NULL),
   hasMinimumcutNumCuts_(NULL),
   minimumcutLength_(NULL),
   minimumcutDistance_(NULL),
@@ -1685,6 +1686,7 @@ lefiLayer::lefiLayer()
   numMinstep_(0),
   numMinstepAlloc_(0),
   minstep_(NULL),
+  minstepType_(NULL),
   minstepLengthsum_(NULL),
   minstepMaxEdges_(NULL),
   minstepMinAdjLength_(NULL),
@@ -1778,6 +1780,7 @@ lefiLayer::lefiLayer()
   spacingTable_(NULL),
   numEnclosure_(0),
   enclosureAllocated_(0),
+  enclosureRules_(NULL),
   overhang1_(NULL),
   overhang2_(NULL),
   encminWidth_(NULL),
@@ -1785,6 +1788,7 @@ lefiLayer::lefiLayer()
   minLength_(NULL),
   numPreferEnclosure_(0),
   preferEnclosureAllocated_(0),
+  preferEnclosureRules_(NULL),
   preferOverhang1_(NULL),
   preferOverhang2_(NULL),
   preferMinWidth_(NULL),
@@ -1810,11 +1814,7 @@ lefiLayer::lefiLayer()
   notchLength_(NULL),
   endOfNotchWidth_(NULL),
   minNotchSpacing_(NULL),
-  eonotchLength_(NULL),
-  minimumcutConnection_(NULL),
-  minstepType_(NULL),
-  enclosureRules_(NULL),
-  preferEnclosureRules_(NULL)
+  eonotchLength_(NULL)
 {
     Init();
 }
@@ -1995,6 +1995,7 @@ lefiLayer::lefiLayer(const lefiLayer& prev)
   hasMinimumcutWithin_(NULL),
   minimumcutWithin_(NULL),
   hasMinimumcutConnection_(NULL),
+  minimumcutConnection_(NULL),
   hasMinimumcutNumCuts_(NULL),
   minimumcutLength_(NULL),
   minimumcutDistance_(NULL),
@@ -2010,6 +2011,7 @@ lefiLayer::lefiLayer(const lefiLayer& prev)
   numMinstep_(0),
   numMinstepAlloc_(0),
   minstep_(NULL),
+  minstepType_(NULL),
   minstepLengthsum_(NULL),
   minstepMaxEdges_(NULL),
   minstepMinAdjLength_(NULL),
@@ -2103,6 +2105,7 @@ lefiLayer::lefiLayer(const lefiLayer& prev)
   spacingTable_(NULL),
   numEnclosure_(0),
   enclosureAllocated_(0),
+  enclosureRules_(NULL), 
   overhang1_(NULL),
   overhang2_(NULL),
   encminWidth_(NULL),
@@ -2110,6 +2113,7 @@ lefiLayer::lefiLayer(const lefiLayer& prev)
   minLength_(NULL),
   numPreferEnclosure_(0),
   preferEnclosureAllocated_(0),
+  preferEnclosureRules_(NULL),
   preferOverhang1_(NULL),
   preferOverhang2_(NULL),
   preferMinWidth_(NULL),
@@ -2135,11 +2139,7 @@ lefiLayer::lefiLayer(const lefiLayer& prev)
   notchLength_(NULL),
   endOfNotchWidth_(NULL),
   minNotchSpacing_(NULL),
-  eonotchLength_(NULL),
-  minimumcutConnection_(NULL),
-  minstepType_(NULL),
-  enclosureRules_(NULL), 
-  preferEnclosureRules_(NULL)
+  eonotchLength_(NULL)
 {
     this->Init();
 
