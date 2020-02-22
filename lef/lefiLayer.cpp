@@ -5121,7 +5121,7 @@ lefiLayer::propNumber(int i) const
     return dvalues_[i];
 }
 
-const char
+char
 lefiLayer::propType(int i) const
 {
     char msg[160];

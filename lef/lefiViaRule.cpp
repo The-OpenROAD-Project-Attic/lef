@@ -807,7 +807,7 @@ lefiViaRule::propNumber(int i) const
     return dvalues_[i];
 }
 
-const char
+char
 lefiViaRule::propType(int i) const
 {
     char msg[160];
