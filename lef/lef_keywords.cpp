@@ -570,9 +570,6 @@ lefuc_array(char    *source,
     *dest = 0;
 } 
 
-void lefError(int           msgNum,
-              const char    *s);
-
 void
 lefStoreAlias()
 {

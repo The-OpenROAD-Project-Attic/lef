@@ -386,9 +386,6 @@ lefUpperCase(const char *str)
     return lefData->shiftBuf;
 }
 
-// for auto upshifting names in case insensitive files 
-extern const char *lefUpperCase(const char *c);
-
 // Function is done from #define CASE, compatibility only
 const char *
 CASE(const char *x)
