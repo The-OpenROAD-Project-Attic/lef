@@ -8,8 +8,6 @@ cmake_minimum_required(VERSION 2.6)
 set(LEFLIB_HOME ${CMAKE_CURRENT_SOURCE_DIR})
 message(STATUS "leflib_home: ${LEFLIB_HOME}")
 
-set(CMAKE_CXX_FLAGS_RELEASE "-O3")
-
 # BISON and ZLIB are required to compile LEF/LEF Parsers.
 find_package(BISON)
 find_package(ZLIB)
@@ -113,13 +111,13 @@ set_target_properties( lefzlib
 # include directory settings
 target_include_directories( lef
   PUBLIC
-  lef/
+  lef
   )
 
 target_include_directories( lefzlib
   PUBLIC
-  lef/
-  lefzlib/
+  lef
+  lefzlib
   )
 
 add_dependencies( lef LefBisonTarget )
