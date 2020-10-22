@@ -4411,6 +4411,7 @@ pad_type:
   | K_OUTPUT        {$$ = (char*)"OUTPUT";}
   | K_INOUT         {$$ = (char*)"INOUT";}
   | K_POWER         {$$ = (char*)"POWER";}
+  | K_GROUND         {$$ = (char*)"GROUND";}
   | K_SPACER        {$$ = (char*)"SPACER";}
   | K_AREAIO    {$$ = (char*)"AREAIO";}
 
