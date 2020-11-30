@@ -3,7 +3,7 @@ project(LEF_PARSER
   LANGUAGES CXX 
 )
 
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.1)
 
 set(LEFLIB_HOME ${CMAKE_CURRENT_SOURCE_DIR})
 message(STATUS "leflib_home: ${LEFLIB_HOME}")
